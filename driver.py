@@ -1,7 +1,7 @@
 '''
 Created on Apr 4, 2012
 
-@author: lanquarden
+@author: lanquarden @edited by Ahmed Raafat
 '''
 
 import msgParser
