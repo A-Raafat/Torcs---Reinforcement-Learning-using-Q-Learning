@@ -140,10 +140,10 @@ class Driver(object):
             
         
 
-            # print("HEEEEEEEEEEEEEH"+str(DistanceNEXT-DistanceNOW))
+           
         if Reward_Next==-2 or self.state.getDamage() > 8500 :
             self.control.setMeta(1)
-        #2print("TIME TAKENNNNNN= " + str(time.time()-start))
+        #2print("TIME TAKEN= " + str(time.time()-start))
         
         return self.control.toMsg()
     
