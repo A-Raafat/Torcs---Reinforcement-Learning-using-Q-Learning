@@ -20,10 +20,10 @@ The server acts as a proxy for the environment and the client provides the contr
 The server sends the client the available sensory input. In return, it receives the desired output of the actuators
 This separates the controller from the environment, allowing it to be treated as an autonomous agent
 
-####### Download links:
+###### Download links:
 
-[Torcs](http://torcs.sourceforge.net/index.php?name=Sections&op=viewarticle&artid=3)
-[SCR plugin]()
+- [Torcs](http://torcs.sourceforge.net/index.php?name=Sections&op=viewarticle&artid=3)
+- [SCR plugin](https://cs.adelaide.edu.au/%7Eoptlog/SCR2015/software.html)
 
 ## TORCS Sensors 
 | Sensor | Definition |
