@@ -13,7 +13,7 @@ You can download TORCS from this link:
 ## SCR-Plugin
 
 
-![alt text](https://github.com/A-Raafat/Torcs---Reinforcement-Learning/blob/master/Pic.jpg)
+![alt text](https://github.com/A-Raafat/Torcs---Reinforcement-Learning/blob/master/Pic.png)
 
 ## TORCS Sensors 
 | Sensor | Definition |
