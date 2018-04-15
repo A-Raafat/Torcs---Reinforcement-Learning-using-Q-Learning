@@ -1,7 +1,9 @@
 '''
 Created on Apr 4, 2012
 
-@author: lanquarden @edited by Ahmed Raafat
+@author: lanquarden 
+
+Edited by: Ahmed Raafat
 '''
 
 import msgParser
@@ -47,7 +49,7 @@ class Driver(object):
         self.prev_rpm = None
         #self.table=Qtable.maketable()
         #after first iteration
-        self.table=pandas.read_csv("D:/HANDSA/Communication/4th year/GP/Phase 2/pyScrcClient-master/src/hamada.csv")
+        self.table=pandas.read_csv("../input_path/Qtable.csv")
         
         self.Accelerate=0
         self.Gearshift=0
