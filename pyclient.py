@@ -107,18 +107,18 @@ while not shutdownClient:
             #print(d.table) #Prints the Qtable
 
             #Creates Xcel File filled with Qtable
-            d.table.to_csv(path_or_buf='D:/HANDSA/Communication/4th year/GP/Phase 2/pyScrcClient-master/src/hamada.csv',index=False)
+            d.table.to_csv(path_or_buf="../input_path/Qtable.csv",index=False)
             
             break
         
         if buf != None and buf.find('***restart***') >= 0:
             d.onRestart()
             print 'Client Restart'
-            d.table.to_csv(path_or_buf='D:/HANDSA/Communication/4th year/GP/Phase 2/pyScrcClient-master/src/hamada.csv',index=False)
-            f=open("D:/HANDSA/Communication/4th year/GP/Phase 2/pyScrcClient-master/src/episode.txt","r")
+            d.table.to_csv(path_or_buf="../input_path/Qtable.csv",index=False)
+            f=open("../input_path/episode.txt","r")
             x=int(f.read())+1
             f.close()
-            f=open("D:/HANDSA/Communication/4th year/GP/Phase 2/pyScrcClient-master/src/episode.txt","w")
+            f=open("../input_path/episode.txt","w")
             f.write(str(x))
             f.close()
             print("Episod number = "+str(x))
