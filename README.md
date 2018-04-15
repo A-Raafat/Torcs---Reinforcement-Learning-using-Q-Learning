@@ -32,7 +32,7 @@ This separates the controller from the environment, allowing it to be treated as
 | CurLapTime | Time elapsed during current lap |
 | Damage | Current damage of the car (the higher is the value the higher is the damage) |
 | distFromStartLine | Distance of the car from the start line along the track line |
-| Distracted | Distance covered by the car from the beginning of the race |
+| distRaced | Distance covered by the car from the beginning of the race |
 | Fuel | Current fuel level |
 | Gear | Current gear: -1 is reverse 0 is neutral and the gear from 1 to 6 |
 | lastLapTime |  Time to complete last lap. Opponents: Vector of 36 sensors that detects the opponent distance in meters (range is [0,100]) within a specific 10 degrees sector: each sensor covers 10 degrees, from  -π to +π  around the car |
@@ -44,36 +44,30 @@ This separates the controller from the environment, allowing it to be treated as
 | trackPos | Distance between the car and the track axis. The value is normalized w.r.t. the track width: it is 0 when the car is on the axis, -1 when the car is on the left edge of the track and +1 when it is on the right edge of the car. Values greater than 1 or smaller than -1 means that the car is outside of the track |
 | wheelSpinVel |  Vector of 4 sensors representing the rotation speed of the wheels |
 
-# TORCS Control Actions
-Accel: Virtual gas pedal (0 means no gas, 1 full gas).
-
-Brake: Virtual brake pedal (0 means no brake, 1 full brake).
-
-Gear: Gear value
-
-Steering: Steering value: -1 and +1 means respectively full left and right, that corresponds to an angle of 0.785398 rad.
-
-Meta: This is meta-control command: 0 Do nothing, 1 ask competition server to restart the race.
+## TORCS Control Actions
+| Action | Discription |
+| ------ | ----------- |
+| Accel | Virtual gas pedal (0 means no gas, 1 full gas) |
+| Brake | Virtual brake pedal (0 means no brake, 1 full brake) |
+| Gear | Gear value |
+| Steering | Steering value: -1 and +1 means respectively full left and right, that corresponds to an angle of 0.785398 rad |
+| Meta | This is meta-control command: 0 Do nothing, 1 ask competition server to restart the race |
 
 
-# Procedure
+## Procedure
 
-1- STATES
+1. STATES
 
 it’s clear that most of the sensor readings represent car states and it is very important for control the car
 
 The states are the speed along the track, the position on the track, the angle with respect to the track axis and five distance sensors that measure the distance to the edge of the track. Note that the track may contain a gravel trap or a bank of grass, which means that the edge of the track might be further away than the edge of the actual road. The 20◦ inputs are not taken directly from sensors 7 and 11, but computed as an average over sensors 6, 7, 8 and 10, 11, 12, respectively, to account for noise
 
-
-
-
-
-
-Sensor name	State Description
-Speed X	Speed of the car along the longitudinal axis of the car
-Angle	Angle between the car direction and the direction of the track axis.
-Track pos	Distance between the car and the track axis
-Distance sensor at −40◦, −20◦, 0◦, 20◦, 40◦	Distance between the car and track [5, 7, 9, 11, 13]
+| Sensor |	State Description |
+| ------ | ----------------- |
+| speedX |	Speed of the car along the longitudinal axis of the car |
+| Angle |	Angle between the car direction and the direction of the track axis |
+| Track pos |	Distance between the car and the track axis |
+| distRaced | Distance sensor at −40◦, −20◦, 0◦, 20◦, 40◦	Distance between the car and track [5, 7, 9, 11, 13] |
 
 
 
