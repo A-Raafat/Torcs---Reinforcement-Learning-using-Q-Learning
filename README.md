@@ -56,7 +56,7 @@ This separates the controller from the environment, allowing it to be treated as
 
 ## Procedure
 
-1. STATES
+**1. STATES**
 
 it’s clear that most of the sensor readings represent car states and it is very important for control the car
 
@@ -71,51 +71,34 @@ The states are the speed along the track, the position on the track, the angle w
 
 
 
-2-Actions
+**2. Actions**
 
 There are five action dimensions available in TORCS accelerate, brake, gear, meta and steer. Since braking is simply a negative acceleration, we shall view this as the negative side of the same dimension.
 
 The basic controller of the SCR
-Name	Range	Description
-Accel	[0,1]	Virtual gas pedal (0 means no gas, 1 full gas).
-Brake	[0,1]	Virtual brake pedal (0 means no brake, 1 full brake)
-Gear	-1,0,1,2,3,4,5,6	Gear value.
-Steer	[-1,1]	Steering value: -1 and +1 means respectively full right and left
-Meta	0 or 1	This is meta-control command: 0 do nothing, 1 ask competition server to restart the race
+| Name |	Range |	Description |
+| ---- | ----- | ----------- |
+| Accel |	[0,1] |	Virtual gas pedal (0 means no gas, 1 full gas) |
+| Brake |	[0,1] |	Virtual brake pedal (0 means no brake, 1 full brake) |
+| Gear |	 -1,0,1,2,3,4,5,6 |	Gear value |
+| Steer |	[-1,1] |	Steering value: -1 and +1 means respectively full right and left |
+| Meta |	0 or 1 |	This is meta-control command: 0 do nothing, 1 ask competition server to restart the race |
 
 
-
-
-
-Gear:
-shifts gear according to the rpm of the car’s engine in Gear shifting values table
-
-Gear	         1	         2   	          3	         4	         5	        6
-Shift up	8000	 9500	9500	9500	9500	0
-Shift down	0	4000	6300	7000	7300	7300
-
-Steer:
- we should make a discretization of these dimensions is needed. Initially the agent was given seven steering actions: -1, -0.5, -0.1, 0, 0.1, 0.5, and 1. This includes actions for small deviations and actions with a larger impact to pass sharp curves, but to provide sharp edges we remove (-1) and (1)
-
-Accel:
-The values for acceleration were tuned manually as well. Since human players tend to balance between full acceleration and no acceleration at all and since the time resolution is quite high (one action per 20ms), it seemed unnecessary to give the agent a high resolution in the acceleration dimension. The agent was given three values: 1, 0 and -1,
-
-actually, steering correlated with acceleration and brake so the resulting discretization give us the following combinations
-
-3-Rewards
+**3. Rewards**
 
 Due to random actions there are good actions and bad actions, we want to achieve our target so we want to prevent the car to
-1-going out of the track
-2-stopping in a certain position
-3-making bad actions
+- going out of the track
+- stopping in a certain position
+- making bad actions
 
 to calculate the rewards, we have 3 situations:
 
-1- car make good lane keeping
-the reward will be positive and high if the distance was long and in general it has a continuous range from [-1,1]
+1. car make good lane keeping
+- the reward will be positive and high if the distance was long and in general it has a continuous range from [-1,1]
 
-2-stop in certain position
-the reward will be negative and equal to -1
+2. stop in certain position
+ - the reward will be negative and equal to -1
 
-3- the car goes out of the track
-the reward will be negative and equal to -1 and we will restart the race
+3. the car goes out of the track
+- the reward will be negative and equal to -1 and we will restart the race
