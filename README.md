@@ -8,35 +8,22 @@ TORCS can be used to develop artificially intelligent (AI) agents for a variety 
 Each on-going race is referred to as a simulation in TORCS and is described through many different data structures. The race situation is updated every 2 milliseconds (500 Hz), including updating the various mathematical models governing the physics of the race, e.g. motion and positioning of the cars and other objects.
 
 # TORCS Sensors 
-Angle:  Angle between the car direction and the direction of the track axis.
-
-curLapTime: Time elapsed during current lap.
-
-Damage: Current damage of the car (the higher is the value the higher is the damage).
-
-distFromStartLine: Distance of the car from the start line along the track line.
-
-Distracted: Distance covered by the car from the beginning of the race.
-
-Fuel: Current fuel level.
-
-Gear: Current gear: -1 is reverse 0 is neutral and the gear from 1 to 6.
-
-lastLapTime:  Time to complete last lap. Opponents: Vector of 36 sensors that detects the opponent distance in meters (range is [0,100]) within a specific 10 degrees sector: each sensor covers 10 degrees, from  -π to +π  around the car.
-
-racePos: Position in the race with respect to other cars.
-
-rpm: Number of rotations per minute of the car engine.
-
-speedX: Speed of the car along the longitudinal axis of the car
-
-speedY: Speed of the car along the transverse axis of the car
-
-track: Vector of 19 range finder sensors: each sensor represents the distance between the track edge and the car. Sensors are oriented every 10 degrees from                 -π/2 and +π/2  in front of the car. Distance are in meters within a range of 100 meters. When the car is outside of the track (i.e. track Pos is less than -1 or greater than 1), these values are not reliable!
-
-trackPos: Distance between the car and the track axis. The value is normalized w.r.t. the track width: it is 0 when the car is on the axis, -1 when the car is on the left edge of the track and +1 when it is on the right edge of the car. Values greater than 1 or smaller than -1 means that the car is outside of the track.
-
-wheelSpinVel:  Vector of 4 sensors representing the rotation speed of the wheels.
+| Sensor | Definition |
+| Angle |  Angle between the car direction and the direction of the track axis |
+| CurLapTime | Time elapsed during current lap |
+| Damage | Current damage of the car (the higher is the value the higher is the damage) |
+| distFromStartLine | Distance of the car from the start line along the track line |
+| Distracted | Distance covered by the car from the beginning of the race |
+| Fuel | Current fuel level |
+| Gear | Current gear: -1 is reverse 0 is neutral and the gear from 1 to 6 |
+| lastLapTime |  Time to complete last lap. Opponents: Vector of 36 sensors that detects the opponent distance in meters (range is [0,100]) within a specific 10 degrees sector: each sensor covers 10 degrees, from  -π to +π  around the car |
+| racePos | Position in the race with respect to other cars |
+| rpm | Number of rotations per minute of the car engine |
+| speedX | Speed of the car along the longitudinal axis of the car |
+| speedY | Speed of the car along the transverse axis of the car |
+| track | Vector of 19 range finder sensors: each sensor represents the distance between the track edge and the car. Sensors are oriented every 10 degrees from -π/2 and +π/2 in front of the car. Distance are in meters within a range of 100 meters. When the car is outside of the track (i.e. track Pos is less than -1 or greater than 1), these values are not reliable! |
+| trackPos | Distance between the car and the track axis. The value is normalized w.r.t. the track width: it is 0 when the car is on the axis, -1 when the car is on the left edge of the track and +1 when it is on the right edge of the car. Values greater than 1 or smaller than -1 means that the car is outside of the track |
+| wheelSpinVel |  Vector of 4 sensors representing the rotation speed of the wheels |
 
 # TORCS Control Actions
 Accel: Virtual gas pedal (0 means no gas, 1 full gas).
