@@ -1,13 +1,19 @@
 # Torcs - Reinforcement-Learning
 Discretized Q-Learning on Torcs ( Lane keeping assistant )
 
-# Introduction
-The Open Racing Car Simulator. TORCS is a modern, modular, highly-portable multi-player, multi-agent car simulator. Its high degree of modularity and portability render it ideal for artificial intelligence research.
+## Introduction
+**The Open Racing Car Simulator.** TORCS is a modern, modular, highly-portable multi-player, multi-agent car simulator. Its high degree of modularity and portability render it ideal for artificial intelligence research.
  
 TORCS can be used to develop artificially intelligent (AI) agents for a variety of problems. At the car level, new simulation modules can be developed, which include intelligent control systems for various car components. At the driver level, a low-level Application program interface (API) gives detailed (but only partial) access to the simulation state. This could be used to develop anything from mid-level control systems to complex driving agents that find optimal racing lines, react successfully in unexpected situations and make good tactical race decisions.
 Each on-going race is referred to as a simulation in TORCS and is described through many different data structures. The race situation is updated every 2 milliseconds (500 Hz), including updating the various mathematical models governing the physics of the race, e.g. motion and positioning of the cars and other objects.
 
-# TORCS Sensors 
+You can download TORCS from this link:
+[TORCS](http://torcs.sourceforge.net/index.php?name=Sections&op=viewarticle&artid=3)
+
+## SCR-Plugin
+
+
+## TORCS Sensors 
 | Sensor | Definition |
 | ------ | ---------- |
 | Angle |  Angle between the car direction and the direction of the track axis |
