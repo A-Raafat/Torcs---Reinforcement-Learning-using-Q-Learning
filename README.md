@@ -9,6 +9,7 @@ Each on-going race is referred to as a simulation in TORCS and is described thro
 
 # TORCS Sensors 
 | Sensor | Definition |
+| ------ | ---------- |
 | Angle |  Angle between the car direction and the direction of the track axis |
 | CurLapTime | Time elapsed during current lap |
 | Damage | Current damage of the car (the higher is the value the higher is the damage) |
