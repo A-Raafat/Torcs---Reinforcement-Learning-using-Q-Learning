@@ -7,15 +7,23 @@ Discretized Q-Learning on Torcs ( Lane keeping assistant )
 TORCS can be used to develop artificially intelligent (AI) agents for a variety of problems. At the car level, new simulation modules can be developed, which include intelligent control systems for various car components. At the driver level, a low-level Application program interface (API) gives detailed (but only partial) access to the simulation state. This could be used to develop anything from mid-level control systems to complex driving agents that find optimal racing lines, react successfully in unexpected situations and make good tactical race decisions.
 Each on-going race is referred to as a simulation in TORCS and is described through many different data structures. The race situation is updated every 2 milliseconds (500 Hz), including updating the various mathematical models governing the physics of the race, e.g. motion and positioning of the cars and other objects.
 
-You can download TORCS from this link:
-[TORCS](http://torcs.sourceforge.net/index.php?name=Sections&op=viewarticle&artid=3)
 
 ## SCR-Plugin
-
+The Open Car Racing Simulator1 is a highly customizable, open source car racing simulator that provides a sophisticated physics engine, 3D graphics, various game modes, and several diverse tracks and car models. Because of this, it has been used in the Simulated Car Racing championship since 2008
 
 <p align="center">
   <img width="460" height="300" src="https://github.com/A-Raafat/Torcs---Reinforcement-Learning/blob/master/Pic.png">
 </p>
+
+Normally, the cars in TORCS have access to all information, including the environment and, to a certain degree, other cars. This is not representative of autonomous agents acting in the real world.
+The server acts as a proxy for the environment and the client provides the control for a single car. The controllers run as external programs and communicate with a customized version of TORCS through UDP connections.
+The server sends the client the available sensory input. In return, it receives the desired output of the actuators
+This separates the controller from the environment, allowing it to be treated as an autonomous agent
+
+####### Download links:
+
+[Torcs](http://torcs.sourceforge.net/index.php?name=Sections&op=viewarticle&artid=3)
+[SCR plugin]()
 
 ## TORCS Sensors 
 | Sensor | Definition |
