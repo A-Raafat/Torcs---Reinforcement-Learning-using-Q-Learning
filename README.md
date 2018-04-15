@@ -147,12 +147,13 @@ the road and one that handles action selection and learning.
 
 ###### Learning Interface steps:
 
-1. GetState
+**1. GetState**
 
-     First, we discretize the distance sensor and speed values as follows:
+First, we discretize the distance sensor and speed values as follows:
 
-     - speedList = [0,10,20,30,40,50,60,70,80,90,100,110,120,130,140,150]
-     - distList     = [-1,0,5,10,20,30,40,50,60,70,80,90,100,120,150,200]
+- speedList = [0,10,20,30,40,50,60,70,80,90,100,110,120,130,140,150]
+- distList     = [-1,0,5,10,20,30,40,50,60,70,80,90,100,120,150,200]
+
 
      We chose these values carefully to cover all possible states and we represented each of them in 4 bits of binary form as they are 16 discretized values.
 
@@ -165,7 +166,8 @@ the road and one that handles action selection and learning.
     e.g. Distance sensor = 200, Maximum sensor No. is 9, Speed = 90, this is equivalent to 1001 010 1111
 
 
-2. ActionSelection
+
+**2. ActionSelection**
 
 We discretized the actions into 15 discrete values as follows:
 | Steer | Accelerate(1) | Neutral(0) | Brake(-1) |
@@ -187,7 +189,8 @@ Therefore, the random exploration is necessary to learn to improve upon the heur
 Max action is the action which has the highest Q-value in the Q-table given the current state.
 
 
-3. RewardFunction
+
+**3. RewardFunction**
 
 We have 3 different scenarios:
 
@@ -204,7 +207,8 @@ It takes -1 reward
 It takes a reward depending on track position, angle and travelled distance with a max value of 1
 
 
-4. QtableUpdate
+
+**4. QtableUpdate**
 
 First, we check if the current state already exists in the table, if not we create it in the Q-table initialized with 0 for all actions.
 
