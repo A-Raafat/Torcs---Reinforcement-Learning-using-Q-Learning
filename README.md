@@ -171,6 +171,7 @@ First, we discretize the distance sensor and speed values as follows:
 **2. ActionSelection**
 
 We discretized the actions into 15 discrete values as follows:
+
 | Steer | Accelerate(1) | Neutral(0) | Brake(-1) |
 | ----- | ------------- | ---------- | --------- |
 | 0.5(left) | 0 | 1 | 2 |
