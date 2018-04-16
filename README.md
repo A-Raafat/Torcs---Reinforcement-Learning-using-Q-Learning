@@ -76,6 +76,7 @@ The states are the speed along the track, the position on the track, the angle w
 There are five action dimensions available in TORCS accelerate, brake, gear, meta and steer. Since braking is simply a negative acceleration, we shall view this as the negative side of the same dimension.
 
 The basic controller of the SCR
+
 | Name |	Range |	Description |
 | ---- | ----- | ----------- |
 | Accel |	[0,1] |	Virtual gas pedal (0 means no gas, 1 full gas) |
