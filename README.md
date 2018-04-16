@@ -223,3 +223,4 @@ simply the first action that popped up.
 
 ## References
 Mohamed Abdou's Masters research (Software Engineer and Researcher at Valeo-Egypt)
+End to end deep reinforcement learning [paper](https://arxiv.org/pdf/1612.04340.pdf) by Mohamed Abdou
