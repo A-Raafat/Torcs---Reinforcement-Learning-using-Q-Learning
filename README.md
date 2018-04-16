@@ -218,3 +218,6 @@ It is possible for multiple actions to have the same value, for example when a n
 and all values are unknown (and all have default value 0). Then, the agent must make a decision
 based on something other than the value. It could pick an action based on some heuristic, or
 simply the first action that popped up.
+
+## References
+Mohamed Abdou's Masters research (Software Engineer and Researcher at Valeo-Egypt)
