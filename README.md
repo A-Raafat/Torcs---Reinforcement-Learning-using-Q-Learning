@@ -1,7 +1,8 @@
 # Torcs - Reinforcement-Learning
 Discretized Q-Learning on Torcs ( Lane keeping assistant )
 
-[https://www.youtube.com/watch?v=kxQeiObGM6s]
+Output:
+https://www.youtube.com/watch?v=kxQeiObGM6s
 
 ## Introduction
 **The Open Racing Car Simulator.** TORCS is a modern, modular, highly-portable multi-player, multi-agent car simulator. Its high degree of modularity and portability render it ideal for artificial intelligence research.
