@@ -120,7 +120,7 @@ the road and one that handles action selection and learning.
 
 **1. carControl**
 
-     It has the control functions that control the car in game, by giving it values then it parses it and sends it to the server to move the car with the given actions.
+   It has the control functions that control the car in game, by giving it values then it parses it and sends it to the server to move the car with the given actions.
 
 **2. carState**
 
@@ -137,7 +137,7 @@ the road and one that handles action selection and learning.
 
 
 
-###### Drive implementation
+#### Drive implementation
 
 **1. CheckStuck**
 
@@ -149,7 +149,7 @@ The primary function of the learning interface is to do action selection and cal
 function of the learning algorithm.
 Learning interface consists of GetState, ActionSelection, RewardFunction and QtableUpdate.
 
-###### Learning Interface steps:
+#### Learning Interface steps:
 
 **1. GetState**
 
