@@ -116,7 +116,7 @@ game tick the SCR server asks the driver to return an action by calling its driv
 The drive function consists of two parts: one that checks whether the agent is stuck or outside
 the road and one that handles action selection and learning.
 
-###### The code consists of :
+### The code consists of :
 
 **1. carControl**
 
@@ -137,7 +137,7 @@ the road and one that handles action selection and learning.
 
 
 
-#### Drive implementation
+### Drive implementation
 
 **1. CheckStuck**
 
@@ -149,7 +149,7 @@ The primary function of the learning interface is to do action selection and cal
 function of the learning algorithm.
 Learning interface consists of GetState, ActionSelection, RewardFunction and QtableUpdate.
 
-#### Learning Interface steps:
+### Learning Interface steps:
 
 **1. GetState**
 
