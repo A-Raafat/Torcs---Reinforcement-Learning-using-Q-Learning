@@ -118,19 +118,19 @@ the road and one that handles action selection and learning.
 
 ###### The code consists of :
 
-1. carControl
+**1. carControl
 
      It has the control functions that control the car in game, by giving it values then it parses it and sends it to the server to move the car with the given actions.
 
-2. carState
+**2. carState
 
      It has all the sensor values, distance from start, damage taken and everything else describes the car state.
 
-3. msgParser
+**3. msgParser
 
      It has a UDP message builder and receiver for the server-client communication. It builds the messages of the control actions and sends it to the server then receives the UDP messages from the server which is the car state.
 
-4. pyclient
+**4. pyclient
 
      It is the client code that connects to the server host given a specific port and socket and then calls the driver function which is our game loop and then uses the msgParser to transfer the UDP messages to the server
 
@@ -139,11 +139,11 @@ the road and one that handles action selection and learning.
 
 ###### Drive implementation
 
-1. CheckStuck
+**1. CheckStuck
 
      This function check that the car is stuck or not, If the car's angle is larger than 45 degrees, it is considered stuck. If it is stuck for more than 25 game ticks and the traveled distance is less than 0.01m, the episode ends. Every time the agent is not stuck, the stuck timer is reset to zero.
 
-2. Learning Interface
+**2. Learning Interface
 
     The primary function of the learning interface is to do action selection and call the update
     function of the learning algorithm.
