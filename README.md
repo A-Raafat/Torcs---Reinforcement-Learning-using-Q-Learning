@@ -70,7 +70,7 @@ The states are the speed along the track, the position on the track, the angle w
 | speedX |	Speed of the car along the longitudinal axis of the car |
 | Angle |	Angle between the car direction and the direction of the track axis |
 | Track pos |	Distance between the car and the track axis |
-| distRaced | Distance sensor at −40◦, −20◦, 0◦, 20◦, 40◦	Distance between the car and track [5, 7, 9, 11, 13] |
+| track | Distance sensor at −40◦, −20◦, 0◦, 20◦, 40◦	Distance between the car and track [5, 7, 9, 11, 13] |
 
 
 
