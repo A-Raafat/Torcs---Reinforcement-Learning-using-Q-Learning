@@ -51,7 +51,7 @@ This separates the controller from the environment, allowing it to be treated as
 | Action | Discription |
 | ------ | ----------- |
 | Accel | Virtual gas pedal (0 means no gas, 1 full gas) |
-| Brake | Virtual brake pedal (0 means no brake, 1 full brake) |
+| Brake | Virtual brake pedal (-1 means no brake, 1 full brake) |
 | Gear | Gear value |
 | Steering | Steering value: -1 and +1 means respectively full left and right, that corresponds to an angle of 0.785398 rad |
 | Meta | This is meta-control command: 0 Do nothing, 1 ask competition server to restart the race |
