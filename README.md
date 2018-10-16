@@ -225,6 +225,6 @@ based on something other than the value. It could pick an action based on some h
 simply the first action that popped up.
 
 ## References
+Daniel Karvolos's [Masters research](https://pdfs.semanticscholar.org/89b2/6da4e6ac2994dccd0eba0eae9649f442a75c.pdf)
 Eng. Mohamed Abdou's [Masters research](https://github.com/A-Raafat/Torcs---Reinforcement-Learning-using-Q-Learning/blob/master/MSc_RL_Thesis.pdf) (Software Engineer and Researcher at Valeo-Egypt)
 
-End to end deep reinforcement learning [paper](https://arxiv.org/pdf/1612.04340.pdf) by Eng. Mohamed Abdou
