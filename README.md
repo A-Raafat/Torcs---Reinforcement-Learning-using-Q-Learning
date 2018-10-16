@@ -48,7 +48,7 @@ This separates the controller from the environment, allowing it to be treated as
 | wheelSpinVel |  Vector of 4 sensors representing the rotation speed of the wheels |
 
 ## TORCS Control Actions
-| Action | Discription |
+| Action | Description |
 | ------ | ----------- |
 | Accel | Virtual gas pedal (0 means no gas, 1 full gas) |
 | Brake | Virtual brake pedal (-1 means no brake, 1 full brake) |
