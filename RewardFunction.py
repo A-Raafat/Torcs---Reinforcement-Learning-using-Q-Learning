@@ -51,10 +51,15 @@ def FindQmaxIndex(state,table):
     State=Stateindex(convert2string(state))
     #print(State)
     
-    x=table.loc[State][1:]
-    ActionIndex=numpy.argmax(x)
-
-    return int(ActionIndex)
+    x=table.loc[State][:]
+    maximum=x[1]
+    ActionIndex=1
+    for i in range (2,16):
+        if x[i]>maximum: 
+            maximum=x[i]
+            ActionIndex=i
+    #print (maximum)
+    return ActionIndex
 '''
 
 #Do After first iteration
